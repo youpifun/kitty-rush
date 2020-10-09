@@ -1,0 +1,72 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    width: 40%;
+    border: 1px solid #ffc107;
+    display: flex;
+    flex-direction: column;
+    background-color: lemonchiffon;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    background-color: lemonchiffon;
+}
+
+.players-board {
+    background: lemonchiffon;
+    padding: 10px;
+}
+
+.player {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.player:last-child {
+    margin: 0;
+}
+
+.player__name {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.player__name_me {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.player__status {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: coral;
+    outline: none;
+}
+
+.player__status_me {
+    cursor: pointer;
+    outline: initial;
+}
+
+.start-game-timer {
+    font-size: 18pt;
+    align-self: center;
+}

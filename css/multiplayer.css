@@ -1,0 +1,53 @@
+.content__row {
+    display: flex;
+    flex-grow: 1;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.box-background {
+    flex-grow: initial;
+}
+
+.progress-table {
+    margin-right: 30px;
+    min-width: 220px;
+}
+
+.progress-table__headers {
+    display: flex;
+}
+
+.progress-table__headers_player, .progress-table__headers_score, .progress-table__headers_time {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.progress-table__headers_player, .player__name {
+    width: 140px;
+}
+
+.progress-table__headers_score, .player__score {
+   width: 80px;
+}
+
+.progress-table__headers_time, .player__time {
+    width: 140px;
+}
+
+.player {
+    display: flex;
+}
+
+.player__name, .player__score, .player__time {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.player__name_me {
+    font-weight: bold;
+}
+
+

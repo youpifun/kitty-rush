@@ -1,0 +1,241 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    user-select: none;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #ffe4c4, #ffd8b9, #ffccb1, #ffc0ab, #ffb3a8);
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.status-bar {
+    display: flex;
+}
+
+.cat-tiles-base {
+  display: inline-flex;
+  min-height: 150px;
+  background-color: #FFE55E;
+  /* width: 1060px; */
+  width: 80%;
+}
+
+.btn-check {
+  align-self: center;
+  margin: auto;
+  width: 150px;
+  height: 40px;
+}
+
+
+.tile, .tile-border {
+  /*старые значения*/
+	/*width: 146px;
+	height: 146px;*/
+
+  /*точные значения*/
+  /*width: 151.173px;
+  height: 151.173px;*/
+  width: 151px;
+  height: 151px;
+
+	cursor: pointer;
+	user-select: none;
+
+	/*background-color: black;*/
+	border-radius: 100%;
+	position: relative;
+}
+
+.tile__image {
+	pointer-events: none;
+	position: absolute;
+	top: -12px;
+	/*opacity: 0.7;*/
+}
+
+.tile-border__visual {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  /*background: yellowgreen;*/
+  background: radial-gradient(circle, red, yellow);
+  opacity: 0.7;
+  position: absolute;
+  top: 54.75px;
+  left: 54.75px;
+  transform: scale(1, 1);
+  transition: 200ms;
+}
+
+.tile-border__visual:hover {
+  transform: scale(1.5, 1.5);
+  transition: 200ms;
+}
+
+.box-background {
+  /* background-image: url("../pictures/box2.png"); */
+  /* background-size: 195px 200px; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-grow: 1;
+  /* margin-left: 10px; */
+  align-self: flex-start;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.tile-grid {
+  background-image: url("../pictures/tile-grid-shell.png");
+  background-repeat: no-repeat;
+  /* width: 756.5px; */
+  width: 57%;
+  height: 438px;
+}
+
+.tile-grid__row {
+	display: flex;
+}
+
+.tile-grid__row:nth-child(2n + 1) {
+	margin-left: 76px;
+}
+
+.tile-grid__row_first {
+  margin-top: 13px;
+}
+
+.tile-grid__row_second {
+	top: -21px;
+  position: relative;
+}
+
+.tile-grid__row_third {
+	top: -41px;
+  position: relative;
+}
+
+
+
+.tile-border_active {
+	border: 5px solid red;
+}
+
+.tile-border__image {
+	pointer-events: none;
+}
+
+.main-wrapper__row {
+  display: flex;
+}
+
+.main-wrapper__row_first {
+  align-items: center;
+}
+
+.riddle-card {
+  /* margin-left: 10px; */
+  margin: 10px;
+}
+
+.content {
+  /* width: 43%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: auto; */
+  flex-grow: 1;
+  height: 438px;
+}
+
+.content__header {
+  display: flex;
+  align-self: stretch;
+}
+
+.timer-wrapper {
+  font-family: cursive;
+  margin: auto;
+}
+
+.timer {
+  display: inline-block;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.sec {
+  display: inline-block;
+  font-size: 14pt;
+}
+
+.controls__btn_music {
+  background-color: lightgreen;
+  padding: 5px;
+  /* background-image: url("../pictures/volume.png"); */
+}
+
+.volume-icon {
+  width: 25px;
+}
+
+
+
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 175px;
+  border: 3px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card__front, .flip-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card__front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card__back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
